@@ -2,13 +2,10 @@
     <div class="index">index</div>
 </template>
 
-<script setup lang="ts">
-import { ref, reactive } from 'vue';
-</script>
+<script setup lang="ts"></script>
+
 <style scoped lang="less">
 .index {
-    height: 20px;
-    font-size: 40px;
-    background: #fff;
+    height: 100vh;
 }
 </style>
