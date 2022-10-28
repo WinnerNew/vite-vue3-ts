@@ -18,12 +18,13 @@ module.exports = {
     ],
     rules: {
         // override/add rules settings here, such as:
+        'vue/multi-word-component-names': 'off', //关闭组件命名校验
         '@typescript-eslint/ban-types': [
             'error',
             {
                 extendDefaults: true,
                 types: {
-                    '{}': false,
+                    '{}': false, //ts支持 {}
                 },
             },
         ],
