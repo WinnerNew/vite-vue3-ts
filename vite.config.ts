@@ -11,7 +11,7 @@ export default defineConfig({
     },
     plugins: [vue()],
     server: {
-        port: 8080, //启动端口
+        // port: 8080, //启动端口
         open: true,
         hmr: true,
         // hmr: {

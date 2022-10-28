@@ -1,8 +1,12 @@
 <template>
-    <div>login</div>
+    <div class="login">login</div>
 </template>
 
 <script setup lang="ts">
 import { ref, reactive } from 'vue';
 </script>
-<style scoped lang="less"></style>
+<style scoped lang="scss">
+.login {
+    background: pink;
+}
+</style>
