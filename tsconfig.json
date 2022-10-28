@@ -1,18 +1,29 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "strict": true,
-    "jsx": "preserve",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "esModuleInterop": true,
-    "lib": ["ESNext", "DOM"],
-    "skipLibCheck": true,
-    "noEmit": true
-  },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+    "compilerOptions": {
+        "typeRoots": [
+            "node_modules/@types", // 默认值
+            "src/types"
+        ], //包含类型声明的文件列表
+        "target": "ESNext", //输出代码 ES 版本，可以是 ["es3"(default), "es5", "es2015", "es2016", "es2017", "esnext"]
+        "useDefineForClassFields": true, //将 class 声明中的字段语义从 [[Set]] 变更到 [[Define]] ,也就是class中声明赋值的方式变更成了 Object.defineProperty
+        "module": "ESNext", //指定使用模块 ["commonjs", "amd", "umd", "system", "es6", "es2015", "esnext", "none"]
+        "moduleResolution": "Node", //选择模块解析策略 ["classic", "node"]
+        "strict": true, //是否开启严格模式 同时开启 alwaysStrict, noImplicitAny, noImplicitThis 和 strictNullChecks
+        "jsx": "preserve", //jsx 的编译方式 可见->https://www.typescriptlang.org/docs/handbook/jsx.html
+        "sourceMap": true, // 生成对应的 map 文件
+        "resolveJsonModule": true, // TypeScript支持导出JSON Module
+        "isolatedModules": true, // 将每个文件作为单独的模块
+        "esModuleInterop": true, // 目前很多常用的包是基于 cjs / UMD 开发的，而写前端代码一般是写 esm，所以常见的场景是 esm 导入 cjs 的库。但是由于 esm 和 cjs 存在概念上的差异，最大的差异点在于 esm 有 default 的概念而 cjs 没有，所以在 default 上会出问题。TS babel webpack 都有自己的一套处理机制来处理这个兼容问题，核心思想基本都是通过 default 属性的增添和读取
+        "skipLibCheck": true, //对库定义文件跳过类型检查
+        "noEmit": true, // 不生成输出文件
+        "lib": ["ESNext", "DOM"], //指定要包含在编译中的库文件
+        "baseUrl": "./", //用于解析非相对模块名称的基目录
+        "paths": {
+            // 模块名到基于 baseUrl 的路径映射的列表
+            "@": ["src"],
+            "@/*": ["src/*"]
+        }
+    },
+    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+    "references": [{ "path": "./tsconfig.node.json" }]
 }
