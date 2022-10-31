@@ -52,5 +52,5 @@
 1. git pull origin master 更新最新的代码
 2. do coding... 编码
 3. git add .  提交改动的文件到git暂存区
-4. npm run commit | git commit -m 'message' 备注git改动信息
+4. npm run commit 备注git改动信息
 5. git push   推送变更到远程分支
