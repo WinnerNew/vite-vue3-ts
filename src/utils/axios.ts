@@ -1,6 +1,17 @@
 import axios, { AxiosResponse, AxiosRequestConfig } from 'axios';
 
-const service = axios.create(); // Request interceptors
+const service = axios.create({
+    baseURL: process.env.VITE_RES_URL,
+    headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    transformRequest: [
+        function (data) {
+            return data;
+        },
+    ],
+}); // Request interceptors
 
 service.interceptors.request.use(
     (config: AxiosRequestConfig) => {
