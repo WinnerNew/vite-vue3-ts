@@ -1,7 +1,6 @@
 import axios, { AxiosResponse, AxiosRequestConfig } from 'axios';
-
 const service = axios.create({
-    baseURL: process.env.VITE_RES_URL,
+    baseURL: import.meta.env.VITE_RES_URL,
     headers: {
         Accept: 'application/json',
         'Content-Type': 'application/x-www-form-urlencoded',
