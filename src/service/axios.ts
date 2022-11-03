@@ -1,6 +1,7 @@
 import axios, { AxiosResponse, AxiosRequestConfig } from 'axios';
 const service = axios.create({
     baseURL: import.meta.env.VITE_RES_URL,
+    timeout: 10000,
     headers: {
         Accept: 'application/json',
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -15,6 +16,11 @@ const service = axios.create({
 service.interceptors.request.use(
     (config: AxiosRequestConfig) => {
         // do something
+        const token = window.sessionStorage.getItem('token');
+        if (token) {
+            // @ts-ignore
+            config.headers.token = token;
+        }
         return config;
     },
     (error: any) => {
