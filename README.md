@@ -10,31 +10,7 @@
 
 1. `vite-plugin-html` 在 vite.config.ts 中配置 plugins 配合 createHtmlPlugin 方法完成 hml 模版配置
 
-```js
-createHtmlPlugin({
-                minify: true,
-                /**
-                 * 在这里写entry后，你将不需要在`index.html`内添加 script 标签，原有标签需要删除
-                 * @default src/main.ts
-                 */
-                entry: 'src/main.ts',
-                /**
-                 * 如果你想将 `index.html`存放在指定文件夹，可以修改它，否则不需要配置
-                 * @default index.html
-                 */
-                template: '/index.html',
-                /**
-                 * 需要注入 index.html ejs 模版的数据
-                 */
-                inject: {
-                    data: {
-                        title: env.VITE_APP_TITLE,
-                        injectScript: `<script src="./inject.js"></script>`,
-                        echartScript: `<script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>`,
-                    },
-                },
-            })
-```
+ ![image-20221105024628171](https://gitee.com/Alvin-Liuwenbin/pictures/raw/master/images/image-20221105024628171.png)
 
 ### less
 
@@ -89,3 +65,4 @@ createHtmlPlugin({
 3. `git add .` 提交改动的文件到 git 暂存区
 4. `npm run commit` 备注 git 改动信息
 5. `git push` 推送变更到远程分支
+
