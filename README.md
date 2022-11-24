@@ -3,7 +3,9 @@
 ## 推荐开发工具及插件
 
 -   [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
-
+## node环境
+ node > 14.18
+ 
 ## 项目配置
 
 ### index.html
