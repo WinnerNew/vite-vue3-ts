@@ -11,15 +11,25 @@ const routes: Array<RouteRecordRaw> = [
         },
         component: () => import('@/pages/Login.vue'),
     },
+    // {
+    //     path: '/',
+    //     name: 'Index',
+    //     meta: {
+    //         title: '首页',
+    //         keepAlive: true,
+    //         requireAuth: true,
+    //     },
+    //     component: () => import('@/pages/Index.vue'),
+    // },
     {
         path: '/',
-        name: 'Index',
+        name: 'Home',
         meta: {
             title: '首页',
             keepAlive: true,
             requireAuth: true,
         },
-        component: () => import('@/pages/Index.vue'),
+        component: () => import('@/pages/Home.vue'),
     },
 ];
 

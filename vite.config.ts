@@ -11,6 +11,7 @@ export default defineConfig(({ command, mode }: ConfigEnv): UserConfig => {
         resolve: {
             //设置别名
             alias: {
+                '~': path.resolve(__dirname, './'),
                 '@': path.resolve(__dirname, 'src'),
                 '@components': path.join(__dirname, './src/components'),
                 '@utils': path.join(__dirname, './src/utils'),

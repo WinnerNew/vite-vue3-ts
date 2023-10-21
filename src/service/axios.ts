@@ -1,4 +1,4 @@
-import axios, { AxiosResponse, AxiosRequestConfig } from 'axios';
+import axios, { AxiosResponse } from 'axios';
 const service = axios.create({
     baseURL: import.meta.env.VITE_RES_URL,
     timeout: 10000,
@@ -14,7 +14,7 @@ const service = axios.create({
 }); // Request interceptors
 
 service.interceptors.request.use(
-    (config: AxiosRequestConfig) => {
+    (config?: any) => {
         // do something
         const token = window.sessionStorage.getItem('token');
         if (token) {

@@ -3,7 +3,7 @@
         <img :src="src" alt="" srcset="" />
         <div data-id="222" class="next">nice</div>
         <div data-id="3233">111</div>
-        <div class="btn" @click="toLogin">Go To Login</div>
+        <el-button type="primary">asdad</el-button>
     </div>
 </template>
 
