@@ -39,10 +39,9 @@ const http = ({ url, method, data }) => {
         options.headers = { 'Content-Type': 'application/json;charset=utf-8' };
     }
     if (['GET', 'DELETE'].includes(options.method)) {
-        // options.body = data;
-        options.headers = { 'Content-Type': 'application/json;charset=utf-8' };
+        // options.headers = { 'Content-Type': 'application/json;charset=utf-8' };
     }
-    if (options.method == 'GET') {
+    if (['GET', 'DELETE'].includes(options.method)) {
         url = url + toQueryStr(data);
     }
     console.log(options, 'options =>');

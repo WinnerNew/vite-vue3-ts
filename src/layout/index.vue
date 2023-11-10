@@ -10,11 +10,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from 'vue';
+// import { ref } from 'vue';
 import Header from './Header/index.vue';
 import Aside from './Aside/index.vue';
 import Main from './Main/index.vue';
-import Footer from './Footer/index.vue';
+// import Footer from './Footer/index.vue';
 </script>
 <style scoped lang="less">
 .layout {

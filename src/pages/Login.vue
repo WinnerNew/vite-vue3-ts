@@ -8,7 +8,7 @@
 import api from '@/api';
 
 const requestRes = async () => {
-    let result = await api.login('zhangsan', '123456');
+    await api.login('zhangsan', '123456');
 };
 </script>
 <style scoped lang="scss">

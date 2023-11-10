@@ -8,16 +8,16 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
+// import { useRouter } from 'vue-router';
 import ussElementLocationControl from '@/hooks/ussElementLocationControl';
-const router = useRouter();
+// const router = useRouter();
 ussElementLocationControl(['222', '3233']);
 const src = 'https://cdn.worldvectorlogo.com/logos/super-kamsi.svg';
-const toLogin = () => {
-    router.push({
-        path: '/login',
-    });
-};
+// const toLogin = () => {
+//     router.push({
+//         path: '/login',
+//     });
+// };
 </script>
 
 <style scoped lang="less">
